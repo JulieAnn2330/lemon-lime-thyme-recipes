@@ -1,2 +1,2 @@
-# lemon-liime-thyme-recipes
+# lemon-lime-thyme-recipes
 An online recipe collection
