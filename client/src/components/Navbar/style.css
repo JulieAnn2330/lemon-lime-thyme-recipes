@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Raleway&display=swap');
+
+#logo {
+  display: block;
+  margin: 20px auto;
+  width: 17%;
+  border-radius: 0%;
+
+}
+
+body {
+  padding-top: 175px;
+}
+
+svg {
+  margin-right: 10px;
+  margin-bottom: 3px;
+}
+
+.menu-item {
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 20px;
+}
+
+.menu-item:hover {
+  color: palegoldenrod;
+  text-decoration: none;
+}
+
+header {
+  background-color:palegoldenrod;
+  padding-top: 5px;
+  padding-bottom: 6px;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #A9BA9D;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: ivory;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background:#A9BA9D;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #A9BA9D;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #A9BA9D;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #A9BA9D;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background:#A9BA9D;
+}
