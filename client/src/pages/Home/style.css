@@ -8,6 +8,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    
   }
   .container span{
     display: block;
@@ -20,3 +21,25 @@
   h4 {
     font-size: 10vw;
   }
+ 
+
+  #card {
+    background-color: #A9BA9D;
+  }
+
+  #button {
+    background-color: palegoldenrod;
+    color: black;
+    width: 200px !important;
+    padding: 20px;
+    margin: 10px;
+
+  }
+
+#input {
+  border-bottom-style: hidden !important;
+}
+
+#messageInput, #channelInput, #channelSearch {
+  border: none;
+}

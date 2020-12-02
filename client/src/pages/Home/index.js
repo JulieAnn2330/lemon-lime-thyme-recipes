@@ -4,6 +4,7 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import "./style.css";
 
 import { useHistory } from "react-router-dom";
+import { Input } from "@material-ui/core";
 
 function Home() {
   const history = useHistory();
@@ -11,29 +12,48 @@ function Home() {
 
   return (
     <Container fluid="lg" className="animate__animated animate__fadeIn">
-      <Card className=" text-center bg-dark mx-auto p-5 m-5">
-        <h1 className="mx-auto drop-shadow-light text-white">
-          Welcome to
-        </h1>
+      <Card className=" text-center bg-ivory mx-auto p-5 m-5" id="card">
         <img
+          style={{ height: "12rem", width: "12rem" }}
           src={Logo}
           alt="LemonLimeThyme logo"
           className="mx-auto drop-shadow-light"
         ></img>
-        <Row>
-          <Col lg={9} md={12}>
+           <h2 className="text-center text-white mt-4 mb-0 mx-auto">
+           Welcome to LemonLimeThyme Recipes! 
+        </h2>
+        <h5 className="text-center text-white mt-4 mb-2 mx-auto" style={{lineHeight: "1.6"}}>
+        The best online resource for creating, storing and searching for those family recipes that you don't already have or that always seem to get misplaced right around the holidays! To get started simply give your recipe collection a name below and click the Create a Collection button. If you know the name of your collection and want to add to it, enter the collection name and click Find a Collection, otherwise click the My Collections link in the NavBar to view all of your collections. I hope you enjoy this as much as I do! So grab your whisk and let's do this!
+        </h5>
+        <br></br>
+        <Row style={{justifyContent: "center"}}>
+         <Input
+          id='input'
+          style={{width: "600px"}}
+          placeholder='Collection Name'
+          inputProps = {{ 'aria-label': 'Message Field',}}
+          autoFocus = {true}
+        />
             <Button
-              autoFocus
-              placeholder="Grab your whisk and let's do this!"
-              className="input my-2"
-              onChange={(e) => {
-                console.log(e);
-                location = e;
-              }}
-            />
-          </Col>
-          <Col lg={3} md={12}>
-            <Button 
+              id="button" 
+              className="btn w-100 h-75 my-2 btn-#A9BA9D"
+              onClick={() => {
+                history.push({
+                  pathname: "/search-flights",
+                  state: { location: location },
+                });
+              }}>
+              Create a Collection
+              </Button>
+              </Row>
+              <Row style={{justifyContent: "center"}}>
+            <Input
+              id="input"
+              style={{width: "600px"}}
+              placeholder='Collection Name'
+           />
+              <Button 
+              id="button" 
               className="btn w-100 h-75 my-2 btn-warning"
               onClick={() => {
                 history.push({
@@ -41,13 +61,11 @@ function Home() {
                   state: { location: location },
                 });
               }}>
-              Let's travel! ✈
+              Find a Collection
               </Button>
-          </Col>
+          
         </Row>
-        <h2 className="text-center text-white mt-4 mb-0 mx-auto">
-          Grab a whisk and let's do this!
-        </h2>
+     
       </Card>
     </Container>
   );

@@ -16,11 +16,12 @@ import ProtectedRoute from "./pages/ProtectedRoutes";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
+import './App.css';
 
 
 function App() {
   return (
-    <Container fluid>
+    <Container fluid className="background">
       <Router>
         <Navbar style={{ position: "sticky", top: 0, left: 0, right: 0 }} />
         <Switch>

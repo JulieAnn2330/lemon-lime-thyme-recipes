@@ -2,11 +2,11 @@ import React from "react";
 import { slide as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
 import "./style.css";
-import Logo from "../../images/logo-small.png";
+import Logo from "../../images/logo-wide.png";
 import { FaRegTimesCircle, FaUserAlt } from 'react-icons/fa';
 import { FaCommentDots } from 'react-icons/fa';
 import { FaBook } from 'react-icons/fa';
-//import { FaSuitcaseRolling } from 'react-icons/fa';
+import { FaListAlt } from 'react-icons/fa';
 //import { FaUserFriends } from 'react-icons/fa';
 //import { FaPlane } from 'react-icons/fa';
 import { FaHome } from 'react-icons/fa';
@@ -15,9 +15,9 @@ import { FaSignOutAlt } from 'react-icons/fa';
 function Navbar() {
   return (
     <div>
-      <header style={{ height: "13rem" }} className="fixed-top body-content border-bottom border-warning">
+      <header style={{ height: "8rem", padding: "10px" }} className="fixed-top body-content border-bottom border-warning">
         <Link to="/">
-          <img alt="logo" style={{ height: "10rem", width: "10rem" }} src={Logo} id="logo"></img>
+          <img alt="logo" style={{ height: "5rem", width: "15rem" }} src={Logo} id="logo"></img>
         </Link>
 
         <Menu>
@@ -25,16 +25,16 @@ function Navbar() {
             <FaHome />Home
           </a>
           <a className="menu-item" href="/collections">
-            <FaBook />Collections
+            <FaBook />My Collections
           </a>
-          {/* <a className="menu-item" href="/search-flights">
-          <FaSearchLocation />Search Flights
-          </a> */}
+          <a className="menu-item" href="/addRecipe">
+          < FaListAlt />Add a Recipe
+          </a>
           {/* <a className="menu-item" href="/trips">
           <FaSuitcaseRolling />Trips
           </a> */}
           <a className="menu-item" href="/messages">
-          <FaCommentDots />Messages
+          <FaCommentDots />Invite Friends & Messages
           </a>
           {/* <a className="menu-item" href="/friends">
           <FaUserFriends />Friends
